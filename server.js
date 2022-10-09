@@ -33,7 +33,7 @@ const middleware = [
     cors(),
     express.json(),
     express.urlencoded({ extended: true }),
-    morgan(':code :method :url :response-time', { stream: accessLogStream }),
+    // morgan(':code :method :url :response-time', { stream: accessLogStream }),
     methodOverride('_method'),
     fileUpload()
 ]
