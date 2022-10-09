@@ -59,24 +59,25 @@ app.get('/', (req, res) => {
     // console.log(req.files);
     // res.send('Hello')
 
-    const options = {
-        method: 'GET',
-        url: 'https://random-user.p.rapidapi.com/getuser',
-        headers: {
-            'X-RapidAPI-Key': '52b7642338mshcdc1c1168ccd256p15d4abjsn897423ec668f',
-            'X-RapidAPI-Host': 'random-user.p.rapidapi.com'
-        }
-    };
+    // const options = {
+    //     method: 'GET',
+    //     url: 'https://random-user.p.rapidapi.com/getuser',
+    //     headers: {
+    //         'X-RapidAPI-Key': '52b7642338mshcdc1c1168ccd256p15d4abjsn897423ec668f',
+    //         'X-RapidAPI-Host': 'random-user.p.rapidapi.com'
+    //     }
+    // };
 
-    axios.request(options).then(function (response) {
-        // console.log(response.data)
-        res.send(response.data)
-        //console.log(response.data);
-    }).catch(function (error) {
-        res.send(error)
-        //console.error(error);
-    });
+    // axios.request(options).then(function (response) {
+    //     // console.log(response.data)
+    //     res.send(response.data)
+    //     //console.log(response.data);
+    // }).catch(function (error) {
+    //     res.send(error)
+    //     //console.error(error);
+    // });
 
+    res.send('Hi There')
 });
 
 app.post('/', async (req, res) => {
@@ -93,6 +94,6 @@ app.get('**', (req, res) => {
 
 
 
-app.listen(8000, () => console.log('App Is Running'))
+app.listen(process.env.PORT || 4200, () => console.log('App Is Running'))
 
 
